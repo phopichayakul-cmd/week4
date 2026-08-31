@@ -1,0 +1,188 @@
+{
+  "info": {
+    "name": "CBE204 Week 4",
+    "description": "Requests for the CBE204 Week 4 in-memory REST API (Students & Cybersecurity Findings).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Students",
+      "item": [
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["students"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Student",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/students/101",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["students", "101"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Student Not Found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/students/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["students", "999"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a Student",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Charlie\",\n  \"email\": \"charlie@example.com\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "http://localhost:3000/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["students"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cybersecurity Findings",
+      "item": [
+        {
+          "name": "Get All Findings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/findings",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["findings"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Finding",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/findings/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["findings", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Finding Not Found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/findings/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["findings", "999"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a Finding",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Unpatched CVE-2026-1234 on Mail Server\",\n  \"severity\": \"High\",\n  \"status\": \"Open\",\n  \"affectedSystem\": \"Mail Server\",\n  \"discoveredDate\": \"2026-08-28\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "http://localhost:3000/findings",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["findings"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "item": [
+        {
+          "name": "Home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": [""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "About",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/about",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["about"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
